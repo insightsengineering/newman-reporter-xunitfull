@@ -1,0 +1,28 @@
+name: Test ⍻
+
+on:
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  newman:
+    name: Newman Tests 🧪
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@85e6279cec87321a52edac9c87bce653a07cf6c2
+
+      - name: Install Reporters
+        run: |
+          npm ci
+          npm pack
+          npm install -g newman-reporter-xunitfull-*.tgz
+
+      - name: Run Newman Tests
+        uses: matt-ball/newman-action@170d252f10d199d75d6be4c739b48a3bd5f15ece
+        with:
+          collection: tests/fixtures/collection.json
+          environment: tests/fixtures/environment.json
+          reporters: '["cli", "xunitfull"]'
+          delayRequest: 500

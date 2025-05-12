@@ -1,0 +1,34 @@
+{
+  "id": "5823B4BC-F978-43CD-A994-54CF05D5769D",
+  "name": "QA-Environment",
+  "values": [
+    {
+      "value": "https://restful-booker.herokuapp.com",
+      "key": "baseURL",
+      "enabled": true
+    },
+    {
+      "value": "Jimmy Neutron",
+      "key": "author",
+      "enabled": true
+    },
+    {
+      "value": "QA Team",
+      "key": "testOwner",
+      "enabled": true
+    },
+    {
+      "value": "high",
+      "key": "testPriority",
+      "enabled": true
+    },
+    {
+      "value": "health-check",
+      "key": "testCategory",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment",
+  "_postman_exported_at": "2018-08-23T18:39:11.962Z",
+  "_postman_exported_using": "Postman/6.2.5"
+}

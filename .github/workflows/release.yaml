@@ -1,0 +1,29 @@
+name: Release 🚀
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  main:
+    name: Create Release 🏷️
+    runs-on: ubuntu-latest
+    environment:
+      name: Semver
+    steps:
+      - name: Checkout Repo 🛎️
+        uses: actions/checkout@85e6279cec87321a52edac9c87bce653a07cf6c2
+        with:
+          persist-credentials: false
+
+      - name: Semantic Release
+        uses: cycjimmy/semantic-release-action@0a51e81a6baff2acad3ee88f4121c589c73d0f0e
+        with:
+          semantic_version: 24.2.3
+          branches: "['main']"
+          extra_plugins: |
+            @semantic-release/changelog@6.0.0
+            @semantic-release/git
+        env:
+          GITHUB_TOKEN: ${{ secrets.REPO_GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

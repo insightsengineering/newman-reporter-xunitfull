@@ -1,0 +1,370 @@
+{
+	"info": {
+		"_postman_id": "71FFA00B-377D-4D6F-9335-81A210F67488",
+		"name": "QA-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"item": [
+				{
+					"name": "Ping the API",
+					"_property_cats": "dogs",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "BD7E6F1A-8BC2-4F01-8CB4-D284C47FF23F",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 201\", () => pm.response.to.have.status(201))",
+									"",
+									"pm.test('Content-Type header is correct', () => pm.response.to.have.header('Content-Type', 'text/plain; charset=utf-8'))"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7F999091-C2CB-47B1-AFA6-696DD550DC05",
+								"type": "text/javascript",
+								"exec": [
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/ping",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"ping"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "9E45C59A-DB77-4FA4-8848-3CA61F02D7EC",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "37461D29-B5C0-4655-92CC-C8E0C0E3BC23",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 201\", () => pm.response.to.have.status(201))",
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Get all Bookings",
+			"item": [
+				{
+					"name": "Get all bookings",
+					"_property_strawberry": "orange",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "1d436a72-c0cc-4fee-9f43-bd017d0d373f",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with all parameters",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking?firstname=sally&lastname=brown&checkin=2017-11-11&checkout=2017-11-15",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "sally"
+								},
+								{
+									"key": "lastname",
+									"value": "brown"
+								},
+								{
+									"key": "checkin",
+									"value": "2017-11-11"
+								},
+								{
+									"key": "checkout",
+									"value": "2017-11-15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with the firstname and last name parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking?firstname=sally&lastname=brown",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "sally"
+								},
+								{
+									"key": "lastname",
+									"value": "brown"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with the firstname  parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e9268b31-7153-4d71-afec-55bdd4da3716",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking?firstname=sally",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "firstname",
+									"value": "sally"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with the lastname parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking?lastname=brown",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "lastname",
+									"value": "brown"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with the checkin parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking?checkin=2017-11-11",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "checkin",
+									"value": "2017-11-11"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all bookings with the checkout parameter",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{baseURL}}/booking?checkout=2017-11-11",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"booking"
+							],
+							"query": [
+								{
+									"key": "checkout",
+									"value": "2017-11-11"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

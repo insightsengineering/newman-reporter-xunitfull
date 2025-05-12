@@ -1,0 +1,42 @@
+{
+  "name": "newman-reporter-xunitfull",
+  "version": "0.1.0",
+  "description": "A Newman XUnit Reporter providing full reports (without aggregation of results) based on newman-reporter-junitfull package",
+  "main": "index.js",
+  "bundleDependencies": [],
+  "dependencies": {
+    "colorette": "^2.0.20",
+    "lodash": "^4.17.21",
+    "luxon": "^3.6.1",
+    "xmlbuilder2": "^3.1.1"
+  },
+  "deprecated": false,
+  "homepage": "https://github.com/insightsengineering/newman-reporter-xunitfull",
+  "keywords": [
+    "newman",
+    "reporter",
+    "xunit"
+  ],
+  "author": {
+    "name": "Insights Engineering",
+    "email": "insightsengineering@example.com"
+  },
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "peerDependencies": {
+    "newman": ">=6.2"
+  },
+  "preferGlobal": true,
+  "bugs": {
+    "url": "https://github.com/insightsengineering/newman-reporter-xunitfull/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/insightsengineering/newman-reporter-xunitfull.git"
+  },
+  "release": {
+    "branches": ["main"]
+  }
+}
