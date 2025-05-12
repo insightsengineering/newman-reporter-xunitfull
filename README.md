@@ -32,8 +32,12 @@ However, you can add extra metadata or properties in the collection like so:
       {
         "name": "Ping the API",
         "_property_color": "green",
-        "event": []
+        "event": [...],
 ...
 ```
 
 Note that the metadata/property must start with `_property_` in order to be parsed by the reporter.
+
+## License
+
+[Apache License, 2.0](LICENSE)
