@@ -10,7 +10,7 @@
 			"item": [
 				{
 					"name": "Ping the API",
-					"_property_cats": "dogs",
+					"_property_animal": "dog",
 					"event": [
 						{
 							"listen": "test",
@@ -86,7 +86,7 @@
 			"item": [
 				{
 					"name": "Get all bookings",
-					"_property_strawberry": "orange",
+					"_property_fruit": "orange",
 					"event": [
 						{
 							"listen": "test",
@@ -252,6 +252,7 @@
 				},
 				{
 					"name": "Get all bookings with the lastname parameter",
+					"_property_vegetable": "tomato",
 					"event": [
 						{
 							"listen": "test",

@@ -1,6 +1,6 @@
 {
   "name": "newman-reporter-xunitfull",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "description": "A Newman XUnit Reporter providing full reports (without aggregation of results) based on newman-reporter-junitfull package",
   "main": "index.js",
   "bundleDependencies": [],
@@ -15,7 +15,9 @@
   "keywords": [
     "newman",
     "reporter",
-    "xunit"
+    "xunit",
+    "junit",
+    "xml"
   ],
   "author": {
     "name": "Insights Engineering",
