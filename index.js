@@ -88,7 +88,6 @@ function XunitFullReporter(emitter, reporterOptions, collectionRunOptions) {
                         key: key
                     }
                 })
-                console.log(`Formatted item properties for ${itemName}:`, JSON.stringify(formattedItemProperties))
             }
 
             // Create a copy of propertyValues and add formatted item properties

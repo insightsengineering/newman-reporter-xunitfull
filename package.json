@@ -1,6 +1,6 @@
 {
   "name": "newman-reporter-xunitfull",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A Newman XUnit Reporter providing full reports (without aggregation of results) based on newman-reporter-junitfull package",
   "main": "index.js",
   "bundleDependencies": [],
